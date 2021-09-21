@@ -20,6 +20,28 @@ class MainController extends AbstractController
     }
 
     /**
+     * @Route("/about", name="about")
+     */
+    public function about(): Response
+    {
+        $annee = date("Y");
+        return $this->render('main/about.html.twig', [
+            "annee" => $annee
+        ]);
+    }
+
+    /**
+     * @Route("/contact", name="contact")
+     */
+    public function contact(): Response
+    {
+        $annee = date("Y");
+        return $this->render('main/contact.html.twig', [
+            "annee" => $annee
+        ]);
+    }
+
+    /**
      * @Route("/addIdea", name="add_idea")
      */
     public function addIdea(): Response
